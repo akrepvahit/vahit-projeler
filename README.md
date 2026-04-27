@@ -47,3 +47,4 @@ AUTH_SECRET=uzun-rastgele-bir-imza
 - JSON aktarimi: localde `JSON disa aktar`, canlida `JSON ice aktar`
 
 Kapak gorseli icin istersen link yapistirabilir, istersen yonetim panelinden dogrudan dosya secerek data URL olarak saklayabilirsin.
+# vahit-projeler
