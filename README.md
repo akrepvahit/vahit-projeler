@@ -48,3 +48,4 @@ AUTH_SECRET=uzun-rastgele-bir-imza
 
 Kapak gorseli icin istersen link yapistirabilir, istersen yonetim panelinden dogrudan dosya secerek data URL olarak saklayabilirsin.
 # vahit-projeler
+# vahit-projeler
