@@ -1,5 +1,4 @@
 import { useDeferredValue, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { demoProjects, type PortfolioProject } from "../../shared/portfolio";
 import { getProjects } from "../lib/api";
 
@@ -83,9 +82,14 @@ export default function HomePage() {
             <a className="ghost-button" href="#projeler">
               Projeler
             </a>
-            <Link className="solid-button" to="/yonetim">
-              Yönetim Paneli
-            </Link>
+            <a
+              className="solid-button"
+              href="https://instagram.com/akrep.vahit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
           </nav>
         </header>
 
@@ -103,9 +107,14 @@ export default function HomePage() {
               <a className="solid-button" href="#projeler">
                 Projeleri Gör
               </a>
-              <Link className="ghost-button" to="/yonetim">
-                Yönetim Paneli
-              </Link>
+              <a
+                className="ghost-button"
+                href="https://instagram.com/akrep.vahit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @akrep.vahit
+              </a>
             </div>
 
             <div className="stat-strip">
@@ -125,20 +134,35 @@ export default function HomePage() {
           </div>
 
           <aside className="hero-card">
-            <p className="eyebrow">Bu sitede ne var?</p>
-            <ul className="feature-list">
-              <li>Her proje için görsel, açıklama, kullanılan teknolojiler ve bağlantılar yer alır.</li>
-              <li>Projeler yönetim panelinden eklenir, güncellenir ve kaldırılır.</li>
-              <li>Portfolyo içeriği tek yerden düzenlenir ve yayındaki siteye yansır.</li>
-            </ul>
+            <p className="eyebrow">Instagram</p>
+            <h3 className="social-title">@akrep.vahit</h3>
+            <p>
+              Yeni paylaşımlar, proje duyuruları ve çalışmalarımdan kısa kesitler için
+              Instagram hesabımı ziyaret edebilirsin.
+            </p>
 
-            <div className="pulse-card">
+            <div className="social-tags">
+              <span>Yeni projeler</span>
+              <span>Tasarım paylaşımları</span>
+              <span>Güncel içerikler</span>
+            </div>
+
+            <div className="pulse-card pulse-card--social">
               <span className="pulse-dot" />
               <div>
-                <strong>Yönetim paneli hazır</strong>
-                <p>Yeni proje eklediğinde bu sayfa güncellenir ve ziyaretçiler tarafından görülebilir.</p>
+                <strong>Takip et</strong>
+                <p>Instagram üzerinden yeni içerikleri daha hızlı görebilirsin.</p>
               </div>
             </div>
+
+            <a
+              className="solid-button social-button"
+              href="https://instagram.com/akrep.vahit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram profiline git
+            </a>
           </aside>
         </div>
       </section>
@@ -252,54 +276,33 @@ export default function HomePage() {
             <p>
               {hasProjects
                 ? "Arama terimini değiştirebilir veya filtreyi temizleyebilirsin."
-                : "Yönetim panelinden proje ekledikten sonra çalışmaların burada görünecek."}
+                : "Yeni projeler eklendikçe bu alan güncellenecek."}
             </p>
-            {!hasProjects ? (
-              <Link className="ghost-button" to="/yonetim">
-                İlk projeyi ekle
-              </Link>
-            ) : null}
           </div>
         ) : null}
       </section>
 
-      <section className="section-shell insight-grid">
-        <article className="insight-card">
-          <p className="eyebrow">Düzenli sunum</p>
-          <h3>Her proje aynı düzen içinde, açık ve anlaşılır biçimde sunulur.</h3>
+      <section className="section-shell instagram-panel">
+        <div className="instagram-copy">
+          <p className="eyebrow">Instagram</p>
+          <h2>@akrep.vahit</h2>
           <p>
-            Ziyaretçiler her projede başlık, açıklama, kullanılan teknolojiler ve
-            bağlantıları tek bakışta görebilir.
+            Projelerden kısa görüntüler, yeni yayınlar ve tasarım paylaşımları için
+            Instagram hesabımı takip edebilirsin.
           </p>
-        </article>
-
-        <article className="insight-card">
-          <p className="eyebrow">Kolay yönetim</p>
-          <h3>İçerik eklemek ve güncellemek için ayrı bir yönetim alanı bulunur.</h3>
-          <p>
-            Yeni proje ekleyebilir, mevcut bilgileri güncelleyebilir ve artık
-            göstermek istemediğin kayıtları kaldırabilirsin.
-          </p>
-        </article>
-
-        <article className="insight-card">
-          <p className="eyebrow">Güncel içerik</p>
-          <h3>Portfolyo sayfası yeni çalışmalar eklendikçe güncel kalır.</h3>
-          <p>
-            Böylece ziyaretçiler eski örnekler yerine doğrudan senin eklediğin gerçek
-            projeleri görür.
-          </p>
-        </article>
-      </section>
-
-      <section className="section-shell cta-panel">
-        <div>
-          <p className="eyebrow">Yönetim paneli</p>
-          <h2>Projelerini ekle, düzenle ve portfolyo sayfanı güncel tut.</h2>
         </div>
-        <Link className="solid-button" to="/yonetim">
-          Yönetim paneline git
-        </Link>
+
+        <div className="instagram-actions">
+          <a
+            className="solid-button"
+            href="https://instagram.com/akrep.vahit"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Profili Aç
+          </a>
+          <p className="instagram-note">Instagram: @akrep.vahit</p>
+        </div>
       </section>
     </main>
   );
